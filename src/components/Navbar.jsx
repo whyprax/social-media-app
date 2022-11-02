@@ -44,56 +44,51 @@ function Navbar() {
   };
 
   return (
-    <Box>
-      <AppBar position="sticky">
-        <StyledToolbar>
-          <Typography
-            variant="h6"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            LAMA DEV
-          </Typography>
-          <Pets sx={{ display: { xs: "block", sm: "none" } }} />
-          <Search elevation={2}>
-            <InputBase placeholder="Search..." />
-          </Search>
-          <Icons sx={{ display: { xs: "none", sm: "flex" } }}>
-            <Badge badgeContent={4} color="error">
-              <Mail />
-            </Badge>
-            <Badge badgeContent={4} color="error">
-              <NotificationsActive />
-            </Badge>
-            <Avatar
-              alt="Remy Sharp"
-              sx={{ width: 30, height: 30 }}
-              onClick={handleClick}
-            />
-          </Icons>
-          <Icons sx={{ display: { xs: "flex", sm: "none" }, gap: "10px" }}>
-            <Typography variant="h6">Remy</Typography>
-            <Avatar
-              alt="Remy Sharp"
-              sx={{ width: 30, height: 30 }}
-              onClick={handleClick}
-            />
-          </Icons>
-        </StyledToolbar>
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          MenuListProps={{
-            "aria-labelledby": "basic-button",
-          }}
-        >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
-        </Menu>
-      </AppBar>
-    </Box>
+    <AppBar position="sticky">
+      <StyledToolbar>
+        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
+          LAMA DEV
+        </Typography>
+        <Pets sx={{ display: { xs: "block", sm: "none" } }} />
+        <Search elevation={2}>
+          <InputBase placeholder="Search..." />
+        </Search>
+        <Icons sx={{ display: { xs: "none", sm: "flex" } }}>
+          <Badge badgeContent={4} color="error">
+            <Mail />
+          </Badge>
+          <Badge badgeContent={4} color="error">
+            <NotificationsActive />
+          </Badge>
+          <Avatar
+            alt="Remy Sharp"
+            sx={{ width: 30, height: 30 }}
+            onClick={handleClick}
+          />
+        </Icons>
+        <Icons sx={{ display: { xs: "flex", sm: "none" }, gap: "10px" }}>
+          <Typography variant="h6">Remy</Typography>
+          <Avatar
+            alt="Remy Sharp"
+            sx={{ width: 30, height: 30 }}
+            onClick={handleClick}
+          />
+        </Icons>
+      </StyledToolbar>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          "aria-labelledby": "basic-button",
+        }}
+      >
+        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
+    </AppBar>
   );
 }
 
